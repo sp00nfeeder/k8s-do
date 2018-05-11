@@ -1,0 +1,11 @@
+---
+- name: prep nodes
+  hosts: all
+  gather_facts: false
+  become: false
+
+  pre_tasks:
+
+    - name: 'install python2'
+      raw: sudo apt-get -y install python-simplejson
+
